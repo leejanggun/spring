@@ -1,0 +1,248 @@
+/* login */
+.loginForm{
+	text-align:center;
+	margin:auto;
+	width:80%;
+}
+.loginForm h2{
+	font-size: 30pt;
+}
+.loginForm div:first-child{
+	margin-top :140px;
+}
+.loginForm div{
+	padding:40px;
+}
+.loginForm div span{
+	padding-right:90px;
+	font-size:20pt;
+}
+.loginForm div input{
+	height:45px;
+	width: 270px;
+	border-radius:5px; 
+}
+.loginForm div button{
+	height:60px;
+	width: 270px;
+	background-color:#4CAF50;
+	color:white;
+	border-radius:8px;
+	border:none;
+	font-size:16pt;	
+}
+.loginForm div:last-child{
+	margin-top: 60px;
+}
+/*  header  */
+li:hover{
+	cursor:pointer;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+header div{
+	width:100%;
+	display:inline-block;
+}
+header ul{
+	list-style:none;
+	 background-color: #4CAF50;
+}
+header ul li{
+	display:inline-block;
+	color:white;
+}
+header div.login ul{
+	float:right;
+	background-color:#2f46b7;
+}
+header div.menu{
+	text-align:center;
+}
+header div.menu ul li{
+	padding:0px 15px;
+	
+	
+}
+div.content{
+	margin:80%;
+	margin:auto;
+	text-align:center;
+}
+.content div aside.path{
+	float:right;
+}
+.content div.find{
+	margin-left:200px;
+	float:left;
+	width:80%;
+	text-align:left;
+}
+.content div.find span{
+	padding-right:15px;
+}
+.content div.find input{
+	margin-right:15px;
+}
+.content div.find div{
+}
+.content div.find select:last-child{
+	margin-right:130px;
+}
+.content div.find button{
+	margin:20px;
+	border:none;
+	padding:5px 15px;
+	background-color:#4CAF50;
+	color:white;
+}
+.content div.info{
+	width:80%;
+	margin:auto;
+}
+.content div table{
+	border-collapse:collapse;
+	width:100%;
+	text-align:center;
+	margin-top:100px;
+}
+.content div.info table tr:nth-child(2n){
+	background-color: #c0c0c0;
+}
+.content div.info table th{
+	background-color:#4CAF50;
+	color:white
+}
+.content div.info table td{
+	border:1px solid black;
+}
+/* <!--등록 --> */
+
+.enrollContent{
+	margin:auto;
+	width:80%;
+	text-align:center;
+}
+.enrollContent h2{
+	font-size:30pt;
+}
+.enrollContent form{
+	margin:auto;
+	text-align:center;
+}
+.enrollContent form table{
+	width:80%;
+}
+.enrollContent form table th,
+.enrollContent form table td{
+	padding: 20px 0px;
+}
+.enrollContent form table td{
+	text-align:left;
+}
+ .enrollContent form table td:last-child{
+	text-align:center;
+}  
+.enrollContent form table th{
+	background-color:#c0c0c0;
+	width:30%;
+}
+.enrollContent form table td input{
+	width:40%;
+	height:30px;
+}
+.enrollContent form table td select{
+	width:40%;
+	height:30px;
+}
+.enrollContent form table td button{
+	width:20%;
+	height:45px;
+	background-color:#4CAF50;
+	color:white;
+	border:none;
+	border-radius:8px;
+	font-size:15px;
+}
+/* <!--수정 --> */
+
+.updateContent{
+	margin:auto;
+	width:80%;
+	text-align:center;
+}
+.updateContent h2{
+	font-size:30pt;
+}
+.updateContent form{
+	margin:auto;
+	text-align:center;
+}
+.updateContent form table{
+	width:80%;
+}
+.updateContent form table th,
+.updateContent form table td{
+	padding: 20px 0px;
+}
+.updateContent form table td{
+	text-align:left;
+}
+ .updateContent form table td:last-child{
+	text-align:center;
+}  
+.updateContent form table th{
+	background-color:#c0c0c0;
+	width:30%;
+}
+.updateContent form table td input{
+	width:40%;
+	height:30px;
+}
+.updateContent form table td select{
+	width:40%;
+	height:30px;
+}
+.updateContent form table td button{
+	width:20%;
+	height:45px;
+	background-color:#4CAF50;
+	color:white;
+	border:none;
+	border-radius:8px;
+	font-size:15px;
+}

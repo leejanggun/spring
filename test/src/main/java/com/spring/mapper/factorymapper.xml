@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.factory">
+	<select id="getList"  resultType="com.spring.vo.FactoryVO">
+		SELECT * FROM dbo.FACTORY_LEE
+	</select>
+	<select id="getSearch" parameterType="int" resultType="com.spring.vo.FactoryVO">
+		SELECT * FROM dbo.FACTORY_LEE WHERE USING = #{using}
+	</select>
+	<select id="getSearchInfo" parameterType="String" resultType="com.spring.vo.FactoryVO">
+		SELECT * FROM dbo.FACTORY_LEE WHERE FCODE=#{fcode}
+	</select>
+	<insert id="getEnroll" parameterType="com.spring.vo.FactoryVO">
+		INSERT INTO dbo.FACTORY_LEE VALUES(#{fcode},#{fname},
+			#{erpcode},#{division},getDate(),#{using})
+	</insert>
+	<update id ="getUpdate" parameterType="com.spring.vo.FactoryVO">
+		UPDATE dbo.FACTORY_LEE SET FNAME=#{fname},ERPCODE=#{erpcode},
+			DIVISION=#{division},USING=#{using} WHERE FCODE =#{fcode}
+	</update>
+	<select id="getCodeCount" resultType="int">
+		SELECT COUNT(*) FROM dbo.FACTORY_LEE WHERE FCODE=#{fcode}
+	</select>
+	<delete id ="getDelete" parameterType="String">
+		DELETE FROM dbo.FACTORY_LEE WHERE FCODE=#{fcode}
+	</delete>
+</mapper>

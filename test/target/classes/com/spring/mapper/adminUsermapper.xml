@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.adminUser">
+	<select id="getList"  resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE
+	</select>
+	<select id="getSearch" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE ID = #{condition}
+	</select>
+	<select id="getSearchID" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE ID LIKE '%'+#{condition}+'%' AND UGRADE=#{grade}
+	</select>
+	<select id="getSearchUNAME" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE UNAME LIKE '%'+#{condition}+'%' AND UGRADE =#{grade}
+	</select>
+	<select id="getSearchIDTotal" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE ID LIKE '%'+#{condition}+'%'
+	</select>
+	<select id="getSearchUNAMETotal" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE UNAME LIKE '%'+#{condition}+'%'
+	</select>
+	<update id ="getUpdate" parameterType="map">
+		UPDATE dbo.USER_LEE SET ID=#{vo.id}, PW=#{vo.pw}, UNAME = #{vo.uname}, UGRADE=#{vo.ugrade} ,
+			PART = #{vo.part}, COMPANY= #{vo.company}, BIRTH= #{vo.birth},DESCRIPTION =#{vo.description}
+				WHERE ID = #{rid}
+	</update>
+	<update id ="getUpdatePw" parameterType="map">
+		UPDATE dbo.USER_LEE SET ID=#{vo.id}, UNAME = #{vo.uname}, UGRADE=#{vo.ugrade} ,
+			PART = #{vo.part}, COMPANY= #{vo.company}, BIRTH= #{vo.birth},DESCRIPTION =#{vo.description}
+				WHERE ID = #{rid}
+	</update>
+	<select id="getIdCount" resultType="int" parameterType="String">
+		SELECT COUNT(ID) FROM dbo.USER_LEE WHERE ID=#{id}
+	</select>
+	<delete id="getDelete" parameterType="String">
+		DELETE FROM dbo.USER_LEE WHERE ID=#{id}
+	</delete>
+	<update id="PWUpdate" parameterType="String">
+		UPDATE dbo.USER_LEE SET LASTPW=getDate() WHERE ID=#{id}
+	</update>
+</mapper>

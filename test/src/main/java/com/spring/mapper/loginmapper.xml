@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.login">
+	<select id="login" parameterType="map" resultType="com.spring.vo.UserVO">
+		SELECT * FROM dbo.USER_LEE WHERE ID=#{id} AND PW=#{pw}
+	</select>
+	<update id="loginUpdate" parameterType="String">
+		UPDATE dbo.USER_LEE SET LASTLOGIN=getDate() WHERE ID=#{id}
+	</update>
+	<select id="loginAjax" parameterType="String" resultType="String">
+		SELECT PW FROM dbo.USER_LEE WHERE ID=#{id}
+	</select>
+</mapper>
